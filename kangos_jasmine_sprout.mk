@@ -24,28 +24,35 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
 
-# Inherit ColtOS product configuration
-$(call inherit-product, vendor/colt/config/common_full_phone.mk)
+# Inherit some common stuff from Project-Awaken
+KANGOS_BUILD_TYPE := OFFICIAL
+$(call inherit-product, vendor/kangos/config/common.mk)
+
+# Gapps
+USE_GAPPS := true
+IS_PHONE := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+
+#KANG OS
+KANGOS_BUILDTYPE := OFFICIAL
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# PixelExperience Properties
-TARGET_INCLUDE_WIFI_EXT := true
-TARGET_GAPPS_ARCH := arm64
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_BOOT_ANIMATION_RES := 1080x2160
-
 # Build Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="coral-user 10 QQ1D.200205.002 6084393 release-keys"
+    PRIVATE_BUILD_DESC="jasmine-user 9 PKQ1.180904.001 V10.0.9.0.PDIMIXM release-keys"
+
+# Density
+TARGET_SCREEN_DENSITY := 400
 
 # Device identifier
 PRODUCT_BRAND := xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := colt_jasmine_sprout
+PRODUCT_NAME := kangos_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
 
-COLT_BUILD_TYPE := UNOFFICIAL
-COLT_DEVICE_MAINTAINER := Naman_Parashar
+# TWRP Support
+BUILD_TWRP := true

@@ -29,10 +29,12 @@ DEVICE_PATH := device/xiaomi/jasmine_sprout
 
 # A/B
 ENABLE_AB := true
-AB_OTA_UPDATER := true
 
 # APEX
 ENABLE_APEX := true
+
+# POWERHINT VARIANT
+EAS_POWERHINT_VARIANT := sdm660
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -50,6 +52,10 @@ PRODUCT_PACKAGES += \
 
 # Device properties
 $(call inherit-product, $(DEVICE_PATH)/device_prop.mk)
+
+# HW crypto
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -101,8 +107,8 @@ $(call inherit-product, build/target/product/verity.mk)
 $(call inherit-product, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)
 
 # AOSP DEVICE
-PRODUCT_NAME := aosp_jasmine_sprout
+PRODUCT_NAME := awaken_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
-PRODUCT_MODEL := Mi A2 (AOSP)
+PRODUCT_MODEL := Mi A2
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
