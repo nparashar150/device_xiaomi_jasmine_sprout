@@ -21,11 +21,11 @@
 # definition file).
 #
 
-# inherit MI A2 ArrowOS device config
+# inherit device config for Project-kangos
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/kangos_jasmine_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    kangos_jasmine_sprout-eng \
-    kangos_jasmine_sprout-userdebug \
     kangos_jasmine_sprout-user \
+    kangos_jasmine_sprout-userdebug \
+    kangos_jasmine_sprout-eng
