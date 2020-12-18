@@ -21,11 +21,11 @@
 # definition file).
 #
 
-# inherit MI A2 lineage device config
+# inherit MI A2 ArrowOS device config
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/colt_jasmine_sprout.mk
+    $(LOCAL_DIR)/kangos_jasmine_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    colt_jasmine_sprout-eng \
-    colt_jasmine_sprout-userdebug \
-		colt_jasmine_sprout-eng
+    kangos_jasmine_sprout-eng \
+    kangos_jasmine_sprout-userdebug \
+	kangos_jasmine_sprout-eng

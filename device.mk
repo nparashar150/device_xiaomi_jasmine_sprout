@@ -29,10 +29,13 @@ DEVICE_PATH := device/xiaomi/jasmine_sprout
 
 # A/B
 ENABLE_AB := true
-AB_OTA_UPDATER := true
+SKIP_ABI_CHECKS := true
 
 # APEX
 ENABLE_APEX := true
+
+# POWERHINT VARIANT
+EAS_POWERHINT_VARIANT := sdm660
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -50,6 +53,10 @@ PRODUCT_PACKAGES += \
 
 # Device properties
 $(call inherit-product, $(DEVICE_PATH)/device_prop.mk)
+
+# HW crypto
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
 # Media
 PRODUCT_COPY_FILES += \

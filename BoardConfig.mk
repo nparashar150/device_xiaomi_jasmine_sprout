@@ -26,9 +26,8 @@ include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 # Device Path
 DEVICE_PATH := device/xiaomi/jasmine_sprout
 
-# A/B
-ENABLE_AB := true
-AB_OTA_UPDATER := true
+# Crypto
+TARGET_HW_DISK_ENCRYPTION := true
 
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
