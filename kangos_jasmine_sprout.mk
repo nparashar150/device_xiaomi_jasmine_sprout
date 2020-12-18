@@ -40,7 +40,7 @@ TARGET_SCREEN_DENSITY := 400
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := arrow_jasmine_sprout
+PRODUCT_NAME := kangos_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
 KANGOS_BUILDTYPE := OFFICIAL
