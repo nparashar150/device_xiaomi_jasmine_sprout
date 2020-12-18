@@ -28,4 +28,4 @@ PRODUCT_MAKEFILES := \
 COMMON_LUNCH_CHOICES := \
     kangos_jasmine_sprout-eng \
     kangos_jasmine_sprout-userdebug \
-	kangos_jasmine_sprout-eng
+    kangos_jasmine_sprout-user \
